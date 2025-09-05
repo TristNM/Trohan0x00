@@ -60,15 +60,13 @@ const getDuration = (startDate: string, endDate?: string) => {
 
 	if (diffMonths < 12) {
 		return `${diffMonths} ${i18n(I18nKey.timelineMonths)}`;
-	} else {
-		const years = Math.floor(diffMonths / 12);
-		const months = diffMonths % 12;
-		if (months === 0) {
-			return `${years} ${i18n(I18nKey.timelineYears)}`;
-		} else {
-			return `${years} ${i18n(I18nKey.timelineYears)} ${months} ${i18n(I18nKey.timelineMonths)}`;
-		}
 	}
+	const years = Math.floor(diffMonths / 12);
+	const months = diffMonths % 12;
+	if (months === 0) {
+		return `${years} ${i18n(I18nKey.timelineYears)}`;
+	}
+	return `${years} ${i18n(I18nKey.timelineYears)} ${months} ${i18n(I18nKey.timelineMonths)}`;
 };
 
 const title = i18n(I18nKey.timeline);

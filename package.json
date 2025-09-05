@@ -3,6 +3,8 @@
 	"type": "module",
 	"version": "4.6",
 	"scripts": {
+		"lint:fix": "biome format --write . && biome lint --fix .",
+		"lint:check": "biome check .",
 		"dev": "astro dev",
 		"start": "astro dev",
 		"check": "astro check",

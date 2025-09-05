@@ -40,7 +40,7 @@
 
 		// 检查是否在TOC元素上
 		const activeElement = document.activeElement;
-		if (activeElement && activeElement.closest("#toc, .table-of-contents")) {
+		if (activeElement?.closest("#toc, .table-of-contents")) {
 			return true;
 		}
 
@@ -109,6 +109,9 @@
 
 	// 劫持 window.scrollTo
 	window.scrollTo = (x, y) => {
+		let x = _x;
+		let y = _y;
+
 		// 处理参数为对象的情况
 		if (typeof x === "object") {
 			const options = x;
@@ -127,6 +130,8 @@
 
 	// 劫持 window.scrollBy
 	window.scrollBy = (x, y) => {
+		let x = _x;
+		let y = _y;
 		const currentY = window.scrollY || window.pageYOffset;
 		const targetY = currentY + y;
 
@@ -274,7 +279,7 @@
 				const target = mutation.target;
 
 				// 检查是否是 Twikoo 相关的 DOM 变化
-				if (target.closest && target.closest("#tcomment")) {
+				if (target?.closest?.("#tcomment")) {
 					// 检查是否有元素被移除或隐藏（可能是面板关闭）
 					if (
 						mutation.removedNodes.length > 0 ||

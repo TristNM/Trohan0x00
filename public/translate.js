@@ -5882,20 +5882,20 @@ var translate = {
 			pattern: (str) => {
 				str = str.replace(/\\/g, "\\\\"); //这个一定要放在第一个，不然会被下面的影响
 				//str = str.replace(/'/g,'\\\'');
-				str = str.replace(/"/g, '\\\"');
+				str = str.replace(/"/g, '\\"');
 				//str = str.replace(/./g,'\\\.');
-				str = str.replace(/\?/g, "\\\?");
-				str = str.replace(/\$/g, "\\\$");
-				str = str.replace(/\(/g, "\\\(");
-				str = str.replace(/\)/g, "\\\)");
-				str = str.replace(/\|/g, "\\\|");
-				str = str.replace(/\+/g, "\\\+");
-				str = str.replace(/\*/g, "\\\*");
-				str = str.replace(/\[/g, "\\\[");
-				str = str.replace(/\]/g, "\\\]");
+				str = str.replace(/\?/g, "\\?");
+				str = str.replace(/\$/g, "\\$");
+				str = str.replace(/\(/g, "\\(");
+				str = str.replace(/\)/g, "\\)");
+				str = str.replace(/\|/g, "\\|");
+				str = str.replace(/\+/g, "\\+");
+				str = str.replace(/\*/g, "\\*");
+				str = str.replace(/\[/g, "\\[");
+				str = str.replace(/\]/g, "\\]");
 				str = str.replace(/\^/g, "\\\^");
-				str = str.replace(/\{/g, "\\\{");
-				str = str.replace(/\}/g, "\\\}");
+				str = str.replace(/\{/g, "\\{");
+				str = str.replace(/\}/g, "\\}");
 				return str;
 			},
 			// new RegExp(pattern, resultText); 中的 resultText 字符串的预处理
@@ -5996,7 +5996,7 @@ var translate = {
 			转化时会去掉最后一个日期的字符
 		*/
 		versionStringToInt: (versionString) => {
-			var vs = versionString.split("\.");
+			var vs = versionString.split(".");
 			var result = 0;
 			result = Number.parseInt(vs[0]) * 1000 * 1000 + result;
 			result = Number.parseInt(vs[1]) * 1000 + result;
