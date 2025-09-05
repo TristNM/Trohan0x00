@@ -1,11 +1,11 @@
 ---
 title: HTB CAP
 published: 2025-08-26
-tags: [HTB, Linux, Easy]
+tags: [Markdown, Blogging, Demo]
 category: Writeups
 author: Trohan0x00
+image: '/src/content/posts/assets/cap.png'
 draft: true
-image: "./cap.png"
 ---
 
 # HTB Labs: Cap
