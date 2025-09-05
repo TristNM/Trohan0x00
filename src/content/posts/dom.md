@@ -4,6 +4,7 @@ published: 2025-07-18
 tags: [Portswigger, Pentest]
 category: 'Learning'
 draft: false 
+description: Learning about DOM Vuln
 image: "/assets/post_image/dom.png"
 ---
 

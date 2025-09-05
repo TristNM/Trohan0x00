@@ -4,6 +4,7 @@ published: 2025-08-26
 tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
+description: Writeup about Cap Machine
 image: '/assets/post_image/cap.png'
 draft: true
 ---

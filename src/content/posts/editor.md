@@ -5,6 +5,7 @@ tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
 draft: true
+description: Writeup about Editor Machine
 image: "/assets/post_image/editor.png"
 ---
 # HTB Labs: Editor 

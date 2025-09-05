@@ -4,6 +4,7 @@ published: 2025-09-03
 tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
+description: Writeup about CodePartTwo Machine
 draft: false
 image: "/assets/post_image/code2.png"
 ---

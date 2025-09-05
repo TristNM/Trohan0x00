@@ -5,6 +5,7 @@ tags: [HTB, Pentest]
 category: Learning
 author: Trohan0x00
 draft: true
+description: Learning about Local File Inclusion
 image: "/assets/post_image/lfi.png"
 ---
 

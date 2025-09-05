@@ -4,6 +4,7 @@ published: 2025-08-01
 image: '/assets/post_image/web_cache.png'
 tags: [Pentest, Portswigger]
 category: 'Learning'
+description: Learning about Web Cache Deception
 draft: false 
 ---
 

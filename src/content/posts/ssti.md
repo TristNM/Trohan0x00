@@ -5,6 +5,7 @@ image: '/assets/post_image/ssti.png'
 tags: [Portswigger, Pentest]
 category: 'Learning'
 draft: false 
+description: Learning about SSTI
 ---
 
 # Research: Server Side Template Engine (SSTI)

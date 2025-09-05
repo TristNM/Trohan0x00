@@ -5,6 +5,7 @@ published: 2025-03-10
 tags: [Portswigger, Pentest]
 category: 'Learning'
 image: '/assets/post_image/xss.png'
+description: Learning about XSS
 draft: false 
 ---
 

@@ -5,6 +5,7 @@ tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
 draft: false
+description: Writeup about TwoMillion Machine
 image: "/assets/post_image/twomillion.png"
 ---
 # HTB Labs: Two Million
@@ -113,7 +114,7 @@ Ta đã thành công vào được `ssh server`. `ls` ra thì có file `user.txt
 
 ## II. Root Flag
 Sau khi tìm được `user flag`, mình bắt đầu đi tìm `root flag` nhưng loay hoay mãi vẫn chưa tìm được thêm thông tin gì về lỗ hỏng để leo quyền và thông tin liên quan. Có check hint thì mình cần kiểm tra thêm về nơi lưu trữ các mail của `Linux system`. Sau một lúc search thì thấy được các mail được gửi đến sẽ được lưu ở `/var/mail`. Đi vào để kiểm tra thì nhận được một bản email gửi đến `admin` như sau
-```mail
+```
 From: ch4p <ch4p@2million.htb>
 To: admin <admin@2million.htb>
 Cc: g0blin <g0blin@2million.htb>
@@ -135,7 +136,7 @@ OK giờ ta đã có payload exploit. Tiếp đến là dựng server đẻ uplo
 ![image](https://hackmd.io/_uploads/rkwLZhldee.png)
 Có vẻ như ta không có quyền uplaod ở cả user thường và admin ở phía ssh. Giờ ta cần phải upload bằng `scp`
 
-```bash!
+```bash
 sshpass -p SuperDuperPass123 scp CVE-2023-0386-master.zip admin@10.10.11.221:/tmp/         
 ```
 Ta sẽ upload thông qua credential ssh mà ta đã có và lưu ở tmp. Cách khai thác thì tiến hành mở 2 terminal do đây là `SSH Server` nên mình sẽ start 2 sessions. Ở session 1 ta sẽ run `./fuse ./ovlcap/lower ./gc`

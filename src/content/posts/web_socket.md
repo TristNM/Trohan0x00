@@ -4,6 +4,7 @@ published: 2025-07-30
 image: '/assets/post_image/ws.png'
 tags: [Portswigger, Pentest]
 category: 'Learning'
+description: Learning about WS Vuln
 draft: false 
 ---
 
