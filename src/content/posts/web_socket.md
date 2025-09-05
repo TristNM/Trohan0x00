@@ -1,7 +1,7 @@
 ---
 title: Web Socket Vulnerability
 published: 2025-07-30
-image: '/src/content/posts/assets/web-socket.png'
+image: '/assets/post_image/ws.png'
 tags: [Portswigger, Pentest]
 category: 'Learning'
 draft: false 

@@ -5,7 +5,7 @@ description: 'Insecure Deserialization vulnerability'
 tags: [Portswigger, Pentest]
 category: 'Learning'
 draft: false 
-image: "/src/content/posts/assets/insecure_des.png"
+image: "/assets/post_image/insecure_des.png"
 ---
 
 

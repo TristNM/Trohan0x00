@@ -1,9 +1,10 @@
 ---
 title: Cross Site Scripting 
 published: 2025-03-10
-# image: '/src/content/posts/assets/web-socket.png'
+# image: '/assets/post_image/xss.png'
 tags: [Portswigger, Pentest]
 category: 'Learning'
+image: '/assets/post_image/xss.png'
 draft: false 
 ---
 

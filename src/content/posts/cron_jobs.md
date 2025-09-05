@@ -1,7 +1,7 @@
 ---
 title: Cron Jobs Gone Wild II in Linux Privilege Escalation
 published: 2025-05-30
-image: '/src/content/posts/assets/cron.png'
+image: '/assets/post_image/cron.png'
 tags: [eJPT, Privilege Escalation, Linux]
 category: 'Learning'
 draft: false 

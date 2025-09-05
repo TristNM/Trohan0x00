@@ -1,7 +1,7 @@
 ---
 title: Clickjacking Vulnerability
 published: 2025-07-14
-image: '/src/content/posts/assets/click.png'
+image: '/assets/post_image/click.png'
 tags: [Portswigger, Pentester]
 category: 'Learning'
 draft: false 

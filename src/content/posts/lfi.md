@@ -5,7 +5,7 @@ tags: [HTB, Pentest]
 category: Learning
 author: Trohan0x00
 draft: true
-image: "/src/content/posts/assets/lfi.png"
+image: "/assets/post_image/lfi.png"
 ---
 
 # Research: Local File Inclusion và Remote File Inclusion

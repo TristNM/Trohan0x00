@@ -1,7 +1,7 @@
 ---
 title: Server Side Template Engine (SSTI)
 published: 2025-08-22
-image: '/src/content/posts/assets/ssti.png'
+image: '/assets/post_image/ssti.png'
 tags: [Portswigger, Pentest]
 category: 'Learning'
 draft: false 
@@ -33,12 +33,12 @@ $output = $twig->render("Dear {first_name},", array("first_name" => $user.first_
 Đoạn mã này không dễ bị `injection template` vì tên của người dùng chỉ được truyền vào template dưới dạng dữ liệu.
 Tuy nhiên, vì các `template` chỉ là các chuỗi ký tự, đôi khi các web developer nối trực tiếp đầu vào của người dùng vào `template` trước khi render. Hãy xem xét một ví dụ tương tự như trên, nhưng lần này, người dùng có thể tùy chỉnh một phần của email trước khi nó được gửi. Ví dụ, họ có thể chọn tên được sử dụng:
 
-```py
+```python
 $output = $twig->render("Dear " . $_GET['name']);
 ```
 Trong ví dụ này, thay vì giá trị tĩnh được truyền vào template, một phần của `template` đang được tạo động bằng cách sử dụng tham số `GET name`. Vì cú pháp template được đánh giá ở phía máy chủ, điều này có thể cho phép kẻ tấn công tiêm payload `SSTI` vào tham số `name`, như sau:
 
-```URL 
+```
 http://vulnerable-website.com/?name={{bad-stuff-here}}
 ```
 
@@ -52,27 +52,27 @@ Ví dụ, hãy xem xét một template có chứa đoạn mã dễ bị tấn c�
 render('Hello ' + username)
 ```
 Trong quá trình kiểm toán, chúng ta có thể kiểm tra lỗ hổng bằng cách yêu cầu một `URL` như:
-```URL
+```
 http://vulnerable-website.com/?username=${7*7}
 ```
 Nếu kết quả đầu ra chứa `Hello 49`, điều này cho thấy phép toán đã được thực hiện ở phía máy chủ. Đây là một minh chứng cho thấy lỗ hổng có thể tồn tại. Lưu ý rằng cú pháp cụ thể cần thiết để thực hiện thành công phép toán sẽ thay đổi tùy thuộc vào `engine template` đang được sử dụng. Chúng ta sẽ thảo luận điều này chi tiết hơn trong bước Xác định.
 ### 2. Ngữ cảnh mã (Code context)
 Trong các trường hợp khác, lỗ hổng xuất hiện khi đầu vào của người dùng được đặt bên trong một biểu thức `template`. Điều này có thể xuất hiện dưới dạng một biến điều khiển bởi người dùng được đặt bên trong một tham số, chẳng hạn như:
-```js
+```javascript
 greeting = getQueryParameter('greeting')
 engine.render("Hello {{" + greeting + "}}", data)
 ```
 Trên trang web, `URL` tương ứng có thể là:
-```URL
+```
 http://vulnerable-website.com/?greeting=data.username
 ```
 Điều này sẽ được hiển thị trong đầu ra là `Hello Trohan0x00`, chẳng hạn. 
 Một phương pháp để kiểm tra lỗ hổng trong ngữ cảnh này là đầu tiên đảm bảo rằng tham số không chứa lỗ hổng `XSS` trực tiếp bằng cách tiêm mã `HTML` tùy ý vào giá trị:
-```URL
+```
 http://vulnerable-website.com/?greeting=data.username<tag>
 ```
 Nếu không có XSS, điều này thường dẫn đến đầu ra trống (chỉ hiển thị Hello mà không có tên người dùng), các thẻ đã được mã hóa, hoặc thông báo lỗi. Bước tiếp theo là thử phá vỡ câu lệnh bằng cách sử dụng cú pháp template thông thường và cố gắng tiêm mã `HTML` tùy ý sau đó:
-```URL
+```
 http://vulnerable-website.com/?greeting=data.username}}<tag>
 ```
 Nếu điều này dẫn đến lỗi hoặc đầu ra trống, ta có thể đã sử dụng cú pháp từ ngôn ngữ `template` sai, hoặc nếu không có cú pháp `template` nào hợp lệ, `SSTI` không thể xảy ra. Mặt khác, nếu đầu ra được hiển thị chính xác cùng với mã `HTML` tùy ý, đây là một dấu hiệu quan trọng cho thấy lỗ hổng tồn tại:

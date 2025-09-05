@@ -5,7 +5,7 @@ tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
 draft: true
-image: "/src/content/posts/assets/editor.png"
+image: "/assets/post_image/editor.png"
 ---
 # HTB Labs: Editor 
 ## I. User flag

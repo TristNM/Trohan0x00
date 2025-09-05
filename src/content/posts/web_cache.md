@@ -1,7 +1,7 @@
 ---
 title: Web Cache Deception
 published: 2025-08-01
-image: '/src/content/posts/assets/web_cache.png'
+image: '/assets/post_image/web_cache.png'
 tags: [Pentest, Portswigger]
 category: 'Learning'
 draft: false 

@@ -4,7 +4,7 @@ published: 2025-07-18
 tags: [Portswigger, Pentest]
 category: 'Learning'
 draft: false 
-image: "/src/content/posts/assets/dom.png"
+image: "/assets/post_image/dom.png"
 ---
 
 # Research: Dom-based Vulnerabilities

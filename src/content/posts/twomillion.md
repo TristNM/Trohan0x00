@@ -5,7 +5,7 @@ tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
 draft: false
-image: "/src/content/posts/assets/twomillion.png"
+image: "/assets/post_image/twomillion.png"
 ---
 # HTB Labs: Two Million
 ## I. User Flag
