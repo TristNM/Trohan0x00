@@ -1,7 +1,7 @@
 ---
 title: HTB CAP
 published: 2025-08-26
-tags: [Markdown, Blogging, Demo]
+tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
 image: '/assets/post_image/cap.png'
@@ -10,6 +10,7 @@ draft: true
 
 # HTB Labs: Cap
 ## I. User Flag
+
 Đây sẽ làm một writeup nhanh với machine này, vì nhìn chung đây là một machine tương đối đơn giản. Scan bằng nmap ta thấy có 3 services
 ![image](https://hackmd.io/_uploads/BkA07giFxl.png)
 Mình sẽ tiến hành check ở phía web server trước

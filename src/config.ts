@@ -117,7 +117,7 @@ export const siteConfig: SiteConfig = {
 		//   src: '/favicon/icon.png',    // 图标文件路径
 		//   theme: 'light',              // 可选，指定主题 'light' | 'dark'
 		//   sizes: '32x32',              // 可选，图标大小
-		// }
+		//
 	],
 };
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
@@ -234,7 +234,7 @@ export const profileConfig: ProfileConfig = {
 	umami: {
 		enable: true, // 是否显示umami统计
 		shareId:
-			"https://cloud.umami.is/share/IEHow7AlnQRHfWDo/trohan0x00.vercel.app", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
+			"9QGj7Zo7dmDDsRza", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
 		region: "eu", //Umami有两个区域，按需选择即可  比如：https://eu.umami.is 你就填入eu
 	},
 };
@@ -271,7 +271,7 @@ export const announcementConfig: AnnouncementConfig = {
 };
 
 export const musicPlayerConfig: MusicPlayerConfig = {
-	enable: true, // 启用音乐播放器功能  src/components/MusicPlayer.vue
+	enable: true, // 启用音乐播放器功能  src/components/MusicPlayer.vue// 播放模式，'local' 使用本地播放列表，'netease' 使用网易云音乐
 };
 
 export const footerConfig: FooterConfig = {

@@ -12,7 +12,7 @@ import Key from "../../i18n/i18nKey";
 import { i18n } from "../../i18n/translation";
 
 // 音乐播放器模式，可选 "local" 或 "meting"，从本地配置中获取或使用默认值 "meting"
-let mode = musicPlayerConfig.mode ?? "meting";
+let mode = musicPlayerConfig.mode ?? "local";
 // Meting API 地址，从配置中获取或使用默认地址(bilibili.uno(由哔哩哔哩松坂有希公益管理)),服务器在海外,部分音乐平台可能不支持并且速度可能慢,也可以自建Meting API
 let meting_api =
 	musicPlayerConfig.meting_api ??
@@ -68,26 +68,50 @@ let volumeBar: HTMLElement;
 const localPlaylist = [
 	{
 		id: 1,
-		title: "ひとり上手",
-		artist: "Kaya",
-		cover: "assets/music/cover/hitori.jpg",
-		url: "assets/music/url/hitori.mp3",
+		title: "Passion",
+		artist: "Bethoven",
+		cover: "assets/music/cover/passion.png",
+		url: "assets/music/url/passion.mp3",
 		duration: 240,
 	},
 	{
 		id: 2,
-		title: "眩耀夜行",
-		artist: "スリーズブーケ",
-		cover: "assets/music/cover/xryx.jpg",
-		url: "assets/music/url/xryx.mp3",
+		title: "Für Elise",
+		artist: "Bethoven",
+		cover: "assets/music/cover/fur_elise.png",
+		url: "assets/music/url/fur_elise.mp3",
 		duration: 180,
 	},
 	{
 		id: 3,
-		title: "春雷の頃",
-		artist: "22/7",
-		cover: "assets/music/cover/cl.jpg",
-		url: "assets/music/url/cl.mp3",
+		title: "sonata",
+		artist: "Bethoven",
+		cover: "assets/music/cover/sonata.png",
+		url: "assets/music/url/sonata.mp3",
+		duration: 200,
+	},
+    {
+		id: 4,
+		title: "Por Una Cabeza",
+		artist: "Carlos Gardel",
+		cover: "assets/music/cover/por.png",
+		url: "assets/music/url/por.mp3",
+		duration: 200,
+	},
+    {
+		id: 5,
+		title: "Coming Home",
+		artist: "Stratovarious",
+		cover: "assets/music/cover/coming_home.png",
+		url: "assets/music/url/coming_home.mp3",
+		duration: 200,
+	},
+    {
+		id: 6,
+		title: "CUỐI CÙNG THÌ",
+		artist: "anh Jack 5m",
+		cover: "assets/music/cover/cct.png",
+		url: "assets/music/url/cct.mp3",
 		duration: 200,
 	},
 ];

@@ -8,6 +8,7 @@ draft: false
 image: "/src/content/posts/assets/insecure_des.png"
 ---
 
+
 # Learning about: Insecure Deserialization
 
 ## I. Khái quát lỗ hỏng
@@ -46,14 +47,13 @@ with open("nguoi_dung.json", "w", encoding="utf-8") as f:
 
 print("\nĐối tượng đã được lưu vào file 'nguoi_dung.json'")
 ```
-Kết quả của đoạn code trên sẽ
 Kết quả của đoạn code trên sẽ là một chuỗi `JSON` có thể đọc được và một file `nguoi_dung.json` với nội dung tương tự. Đây chính là quá trình biến đổi đối tượng từ bộ nhớ thành một định dạng để lưu trữ.
 
 ### 2. Deserialization
 Ngược lại với quá trình trên chính là `Deserialization` hay còn gọi là `giải tuần tự hóa`. Quá trình này sẽ biến từ một chuỗi `byte` hoặc các giá trị đã được `tuần tự hóa` quay trở về định dạng ban đầu (chính là các objects)
 
 Bây giờ, chúng ta sẽ đọc file nguoi_dung.json đã tạo ở trên và chuyển đổi chuỗi JSON trở lại thành một đối tượng Python.
-```python!
+```python
 import json
 
 # Bước 1: Đọc chuỗi JSON từ file
