@@ -23,9 +23,9 @@ const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
 	title: "Trohan0x00 blog",
-	subtitle: "One demo website",
+	subtitle: "Notes on Red Team & Pentesting",
 
-	lang: SITE_LANG,
+	lang: "en",
 
 	themeColor: {
 		hue: 210, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
@@ -41,9 +41,7 @@ export const siteConfig: SiteConfig = {
 		ignoreTags: ["script", "style", "code", "pre"], // 翻译时忽略的 HTML 标签
 	},
 	banner: {
-		enable: true, // 是否启动Banner壁纸模式
-
-		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
+		enable: true,
 		src: {
 			desktop: [
 				"/assets/desktop-banner/1.webp",
@@ -159,7 +157,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
-			name: "链接",
+			name: "Writeups",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
@@ -173,7 +171,7 @@ export const navBarConfig: NavBarConfig = {
 					name: "Bilibili",
 					url: "https://space.bilibili.com/701864046",
 					external: true,
-					icon: "fa6-brands:bilibili",
+					icon: "fa6-brands:linux",
 				},
 				{
 					name: "Gitee",
@@ -230,29 +228,39 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.gif", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
-	name: "Mizuki",
-	bio: "世界很大,一定要去看看",
+	name: "Trohan0x00",
+	bio: "Cybersecurity student • Red Team & Pentes",
 	links: [
 		{
-			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
-		{
-			name: "Gitee",
-			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
-		},
-		{
-			name: "GitHub",
+			name: "Github",
 			icon: "fa6-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
+			url: "https://github.com/TristNM",
+		},
+		{
+			name: "Email",
+			icon: "fa6-regular:envelope",
+			url: "mailto:trietnguyen1892@gmail.com",
+		},
+		{
+			name: "Hackmd",
+			icon: "fa6-brands:github",
+			url: "https://hackmd.io/@Trohan0x00",
+		},
+		{
+			name: "LinkedIn",
+			icon: "fa6-brands:linkedin",
+			url: "https://www.linkedin.com/in/trohan0x00/",
+		},
+		{
+			name: "Wix",
+			icon: "fa6-brands:wix",
+			url: "https://trietnguyen1892.wixstudio.com/trohanblog",
 		},
 	],
 	// Umami统计部份，记得在layout插入Umami的head标签
 	umami: {
-		enable: false, // 是否显示umami统计
-		shareId: "", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
+		enable: true, // 是否显示umami统计
+		shareId: "https://cloud.umami.is/share/IEHow7AlnQRHfWDo/trohan0x00.vercel.app", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
 		region: "eu", //Umami有两个区域，按需选择即可  比如：https://eu.umami.is 你就填入eu
 	},
 };
@@ -289,7 +297,7 @@ export const announcementConfig: AnnouncementConfig = {
 };
 
 export const musicPlayerConfig: MusicPlayerConfig = {
-	enable: true, // 启用音乐播放器功能
+	enable: true, // 启用音乐播放器功能  src/components/MusicPlayer.vue
 };
 
 export const footerConfig: FooterConfig = {

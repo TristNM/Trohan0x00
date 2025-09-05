@@ -1,54 +1,38 @@
-# About This Site
-
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/matsuzaka-yuki/mizuki) theme.
-
-::github{repo="matsuzaka-yuki/Mizuki"}
-
-## 🌟 Theme Features
-
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
-
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
-
-### 🌐 Internationalization
-- **Multi-language Support** - Real-time translation capabilities
-- **Auto Language Detection** - Detects user preferences automatically
-- **Client-side Translation** - Powered by Edge Translate technology
-- **10+ Languages Supported** - EN, ZH-CN, ZH-TW, JA, KO, ES, TH, VI, ID, TR
-
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
-
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
-
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
-
+---
+# the default layout is 'page'
+icon: fas fa-info-circle
+order: 4
+title: About
 ---
 
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+# 👋 Xin chào, mình là Trohan0x00
+
+Mình hiện là **sinh viên ngành An toàn thông tin** (Cyber Security), định hướng chuyên sâu về **Penetration Testing & Red Team**.  
+Niềm đam mê của mình là nghiên cứu lỗ hổng bảo mật, xây dựng lab thực hành và chia sẻ kiến thức qua blog này.  
+
+
+## 🔑 Kỹ năng & kiến thức
+- Pentesting Web (OWASP, PortSwigger Labs)  
+- Active Directory Lab & Privilege Escalation  
+- Linux (Arch-based) & Windows Internals  
+- Lập trình: **Python, Bash, C/C++**
+- Offensive Security tools & CTF practice (HackTheBox, TryHackMe)
+
+
+## 📚 Chứng chỉ & thành tựu
+- [eJPT (eLearnSecurity Junior Penetration Tester)](https://certs.ine.com/62c04aa5-d85c-431a-a308-20d89c8f8da1#acc.k7cyw2QL)  
+- [ICCA (INE Certified Cloud Associate)](https://certs.ine.com/878e7621-feb0-4891-a082-f413f3a66dff#acc.Jdpv6nDl)  
+
+## 🎯 Mục tiêu
+- Nâng cao kỹ năng **Red Team & Offensive Development**  
+- Hoàn thành nhiều writeups & research chia sẻ cộng đồng  
+- Chuẩn bị cho internship/trainee trong lĩnh vực Pentest  
+
+
+## 🔗 Liên hệ
+- GitHub: [Trohan0x00](https://github.com/Trohan0x00)  
+- Email: you@example.com  
+- LinkedIn: (bổ sung nếu có)  
+
+
+> ✨ Blog này sẽ là nơi mình lưu lại **notes, writeups, cheat sheets** và chia sẻ trải nghiệm trong quá trình học và thực hành Pentest/Red Team.
