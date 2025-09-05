@@ -4,7 +4,7 @@ published: 2025-08-26
 tags: [Markdown, Blogging, Demo]
 category: Writeups
 author: Trohan0x00
-image: '/src/content/posts/assets/cap.png'
+image: '/assets/post_image/cap.png'
 draft: true
 ---
 

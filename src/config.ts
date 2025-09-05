@@ -80,18 +80,17 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "Beautiful Mizuki!", // 主页横幅主标题
+			title: "Trohan0x00 · Security Notes", // 主页横幅主标题
 
 			subtitle: [
-				"A Showcase Demo Site",
-				"Carousel Highlight: Innovation",
-				"Carousel Focus: User Experience",
-				"Carousel Spot: Core Advantages",
+				"Red Team · Web Exploitation · Pentesting",
+    			"Writeups & Payloads",
+    			"Learning in public :v",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
 
-				speed: 100, // 打字速度（毫秒）
+				speed: 70, // 打字速度（毫秒）
 				deleteSpeed: 50, // 删除速度（毫秒）
 				pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
 			},
@@ -101,7 +100,7 @@ export const siteConfig: SiteConfig = {
 			enable: false, // 显示横幅图片来源文本
 
 			text: "Describe", // 要显示的来源文本
-			url: "", // （可选）原始艺术品或艺术家页面的 URL 链接
+			url: "https://www.minecraft.net/", // （可选）原始艺术品或艺术家页面的 URL 链接
 		},
 
 		navbar: {
@@ -157,50 +156,53 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
 		{
-			name: "Writeups",
+			name: "Categories",
+			url: "/links/",
+			icon: "material-symbols:link",
+			children: [
+				{
+					name: "Writeups",
+					url: "/archive/?category=Writeups",
+					icon: "fa6-solid:pen-to-square",
+				},
+				{
+					name: "Learning",
+					url: "archive/?category=Learning",
+					icon: "fa6-solid:book-open",
+				},
+				
+			],
+		},
+		{
+			name: "Social Networks",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
 				{
 					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
+					url: "https://github.com/TristNM",
 					external: true,
 					icon: "fa6-brands:github",
 				},
 				{
-					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
+					name: "LinkedIn",
+					url: "https://www.linkedin.com/in/trohan0x00/",
 					external: true,
-					icon: "fa6-brands:linux",
+					icon: "fa6-brands:linkedin",
 				},
-				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
+			    {
+  					name: "Hackmd",
+  					icon: "fa6-solid:book",   // hoặc "tabler:book"
+  					url: "https://hackmd.io/@Trohan0x00",
 					external: true,
-					icon: "mdi:git",
-				},
-			],
-		},
-		{
-			name: "其他",
-			url: "#",
-			icon: "material-symbols:more-horiz",
-			children: [
-				{
-					name: "项目展示",
-					url: "/projects/",
-					icon: "material-symbols:work",
 				},
 				{
-					name: "技能展示",
-					url: "/skills/",
-					icon: "material-symbols:psychology",
-				},
-				{
-					name: "时间线",
-					url: "/timeline/",
-					icon: "material-symbols:timeline",
-				},
+					name: "Wix",
+					icon: "fa6-brands:wix",
+					url: "https://trietnguyen1892.wixstudio.com/trohanblog",
+					external: true,
+			    },
+				
 			],
 		},
 	],
@@ -222,20 +224,11 @@ export const profileConfig: ProfileConfig = {
 			url: "mailto:trietnguyen1892@gmail.com",
 		},
 		{
-			name: "Hackmd",
-			icon: "fa6-brands:github",
-			url: "https://hackmd.io/@Trohan0x00",
-		},
-		{
 			name: "LinkedIn",
 			icon: "fa6-brands:linkedin",
 			url: "https://www.linkedin.com/in/trohan0x00/",
 		},
-		{
-			name: "Wix",
-			icon: "fa6-brands:wix",
-			url: "https://trietnguyen1892.wixstudio.com/trohanblog",
-		},
+		
 	],
 	// Umami统计部份，记得在layout插入Umami的head标签
 	umami: {
