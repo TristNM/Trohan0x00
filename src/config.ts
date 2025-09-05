@@ -19,13 +19,13 @@ import { getTranslateLanguageFromConfig } from "./utils/language-utils";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
-const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_LANG = "en"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
 	title: "Trohan0x00 blog",
 	subtitle: "Notes on Red Team & Pentesting",
 
-	lang: "en",
+	lang: SITE_LANG,
 
 	themeColor: {
 		hue: 210, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
@@ -182,26 +182,6 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "我的",
-			url: "/content/",
-			icon: "material-symbols:person",
-			children: [
-				LinkPreset.Anime,
-				LinkPreset.Diary,
-				{
-					name: "相册",
-					url: "/albums/",
-					icon: "material-symbols:photo-library",
-				},
-			],
-		},
-		{
-			name: "关于",
-			url: "/content/",
-			icon: "material-symbols:info",
-			children: [LinkPreset.About, LinkPreset.Friends],
-		},
-		{
 			name: "其他",
 			url: "#",
 			icon: "material-symbols:more-horiz",
@@ -229,7 +209,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.gif", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "Trohan0x00",
-	bio: "Cybersecurity student • Red Team & Pentes",
+	bio: "Penetration Tester • Academy of Cryptography Techniques",
 	links: [
 		{
 			name: "Github",
@@ -278,19 +258,19 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: true, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
 	},
 };
 
 export const announcementConfig: AnnouncementConfig = {
-	title: "公告", // 公告标题
-	content: "欢迎来到我的博客！这是一个示例公告。", // 公告内容
+	title: "About", // 公告标题
+	content: "Something about me ><", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
-		text: "了解更多", // 链接文本
+		text: "whoami", // 链接文本
 		url: "/about/", // 链接 URL
 		external: false, // 内部链接
 	},

@@ -1,10 +1,11 @@
 ---
 title: HTB CodeTwo
 published: 2025-09-03
-tags: [Markdown, Blogging, Demo]
+tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
-draft: true
+draft: false
+image: "/src/content/posts/assets/code2.png"
 ---
 
 # HTB Labs: CodeTwo

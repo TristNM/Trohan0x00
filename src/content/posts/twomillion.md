@@ -1,7 +1,7 @@
 ---
 title: HTB TwoMillion
 published: 2025-08-02
-tags: [Markdown, Blogging, Demo]
+tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
 draft: false

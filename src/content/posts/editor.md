@@ -1,7 +1,7 @@
 ---
 title: HTB Editor
 published: 2025-08-20
-tags: [Blogging, Linux]
+tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
 draft: true
