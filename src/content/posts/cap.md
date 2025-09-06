@@ -26,6 +26,7 @@ login fpt với credential `nathan:Buck3tH4TF0RM3!` thì ta lấy được `user
 ![image](https://hackmd.io/_uploads/H1-GFliFgl.png)
 > cbd2a96465af9f33d828a4f84e67a064
 
+
 ## II. Root flag
 Vẫn với credential cũ, ta có thể login vào `ssh` server để thực hiện việc leo quyền. Ta dùng `getcap -r / 2>/dev/null` để check tất cả các file có `capabilities` 
 ![image](https://hackmd.io/_uploads/rJ63CejYge.png)

@@ -111,7 +111,7 @@ const localPlaylist = [
 		title: "CUỐI CÙNG THÌ",
 		artist: "anh Jack 5m",
 		cover: "assets/music/cover/cct.png",
-		url: "assets/music/url/cct.mp3",
+		url: "assets/music/url/ct.mp3",
 		duration: 200,
 	},
 ];
@@ -273,9 +273,9 @@ function handleLoadSuccess() {
 
 function handleLoadError(event: Event) {
 	isLoading = false;
-	showErrorMessage(`无法播放 "${currentSong.title}"，正在尝试下一首...`);
+	showErrorMessage(`Unable to play "${currentSong.title}", trying the next song bruhh...`);
 	if (playlist.length > 1) setTimeout(() => nextSong(), 1000);
-	else showErrorMessage("播放列表中没有可用的歌曲");
+	else showErrorMessage("No available songs in the playlist");
 }
 
 function handleLoadStart() {}

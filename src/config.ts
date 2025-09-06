@@ -22,7 +22,7 @@ import { getTranslateLanguageFromConfig } from "./utils/language-utils";
 const SITE_LANG = "en"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
 
 export const siteConfig: SiteConfig = {
-	title: "Trohan0x00 blog",
+	title: "Trohan0x00",
 	subtitle: "Notes on Red Team & Pentesting",
 
 	lang: SITE_LANG,
@@ -230,11 +230,11 @@ export const profileConfig: ProfileConfig = {
 		},
 		
 	],
-	// Umami统计部份，记得在layout插入Umami的head标签
+	// Umami analytics: remember to insert the Umami head tag in your layout
 	umami: {
 		enable: true, // 是否显示umami统计
 		shareId:
-			"9QGj7Zo7dmDDsRza", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
+			"6A338YgvrzbG13mX", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
 		region: "eu", //Umami有两个区域，按需选择即可  比如：https://eu.umami.is 你就填入eu
 	},
 };
@@ -252,7 +252,7 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 };
 
 export const commentConfig: CommentConfig = {
-	enable: true, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
 	},
