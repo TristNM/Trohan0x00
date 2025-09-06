@@ -5,7 +5,7 @@ description: Learning about XXE Vuln
 tags: [HTB, Pentest]
 category: Learning
 author: Trohan0x00
-draft: flase
+draft: false
 image: "/assets/post_image/xxe.png"
 ---
 
