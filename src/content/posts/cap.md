@@ -6,7 +6,7 @@ category: Writeups
 author: Trohan0x00
 description: Writeup about Cap Machine
 image: '/assets/post_image/cap.png'
-draft: true
+draft: false
 ---
 
 # HTB Labs: Cap

@@ -4,7 +4,7 @@ published: 2025-08-20
 tags: [HTB, Linux, Easy]
 category: Writeups
 author: Trohan0x00
-draft: true
+draft: flase
 description: Writeup about Editor Machine
 image: "/assets/post_image/editor.png"
 ---

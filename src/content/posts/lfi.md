@@ -4,7 +4,7 @@ published: 2025-04-10
 tags: [HTB, Pentest]
 category: Learning
 author: Trohan0x00
-draft: true
+draft: flase
 description: Learning about Local File Inclusion
 image: "/assets/post_image/lfi.png"
 ---
