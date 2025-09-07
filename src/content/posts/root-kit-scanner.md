@@ -1,10 +1,11 @@
 ---
-title: Privilege Escalation - Rootkit Scanner
+title: eJPT Privilege Escalation - Rootkit Scanner
 published: 2025-06-08
-tags: [eJPT, Linux, Privilege Escalation]
+tags: [eJPT, Linux, Privilege Escalation, Pentest]
 category: 'Learning'
 description: Privilege Escalation using Rootkit Scanner
 draft: false 
+image: "/assets/post_image/ejpt.png"
 ---
 
 

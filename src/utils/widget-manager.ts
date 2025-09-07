@@ -1,9 +1,9 @@
+import { sidebarLayoutConfig } from "../config";
 import type {
+	SidebarLayoutConfig,
 	WidgetComponentConfig,
 	WidgetComponentType,
-	SidebarLayoutConfig,
 } from "../types/config";
-import { sidebarLayoutConfig } from "../config";
 
 /**
  * 组件映射表 - 将组件类型映射到实际的组件路径
@@ -73,9 +73,8 @@ export class WidgetManager {
 	/**
 	 * 获取组件的CSS类名
 	 * @param component 组件配置
-	 * @param index 组件在列表中的索引
 	 */
-	getComponentClass(component: WidgetComponentConfig, index: number): string {
+	getComponentClass(component: WidgetComponentConfig): string {
 		const classes: string[] = [];
 
 		// 添加基础类名

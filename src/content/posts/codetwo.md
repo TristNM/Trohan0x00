@@ -52,7 +52,7 @@ Giờ ta đã có credential hoàn chỉnh `marco:swetangelbabylove` giờ thì 
 Check với `sudo -l`, ta thấy có một process có thể run với toàn quyền `root` là `/usr/local/bin/npbackup-cli`. 
 ![image](https://hackmd.io/_uploads/BJ5oGfPcxl.png)
 `npbackup-cli (Portable Network Backup Client)` đây là công cụ `CLI` để tạo và quản lý backup, hỗ trợ snapshot, restore, kiểm tra tính toàn vẹn, và housekeeping. Và file config mặc định sẽ là `npbackup.conf` cũng được tìm thấy ngay tại thư mục hiện tại
-```config
+```
 conf_version: 3.0.1
 audience: public
 repos:

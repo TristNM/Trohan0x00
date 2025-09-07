@@ -188,7 +188,7 @@ Giờ bước tiếp theo là gen payload và gửi đến nạn nhân thôi :sm
 * `Máy chủ Gốc (Origin Server)`: Lại không chuẩn hóa đường dẫn theo cách đó, hoặc xử lý nó khác đi (có thể không giải mã hoặc không giải quyết ../).
 
 Về cơ bản, ở biến thể này ta sẽ làm ngược lại đôi chút so với trước cụ thể 
-```URL
+```
 /<dynamic-path>%2f%2e%2e%2f<static-directory-prefix> 
 ```
 * `<dynamic-path>`: Đây là phần đường dẫn đến một tài nguyên động, nhạy cảm trên máy chủ gốc. Ví dụ như ở các lab trước là phần `/my-account`
@@ -221,7 +221,7 @@ Header `X-Cache` đã xuất hiện, tức là ở phía `Cache server` đã `ch
 Ta sẽ thử thay đổi email của mình 
 ![image](https://hackmd.io/_uploads/HyFYlgKPlg.png)
 Thấy rằng mỗi `req` gửi sẽ kèm theo một `CRSF Token` việc cần làm là ta sẽ lấy được `CSRF Token` của `administrator`, vì vậy ta đã có đủ thứ cần để khai thác, giờ ta sẽ gen payload gửi cho nạn nhân
-```URL 
+```
 /my-account;%2f%2e%2e%2frobots.txt?wcd=1
 ```
 `%3b` sẽ là `URL encoded` của kí tự `;`. Mọi giải thích ở các lab trước mình đã nêu rõ nên giờ sẽ không cần nói thêm nữa 

