@@ -1,4 +1,3 @@
-import { factory } from "typescript";
 import type {
 	AnnouncementConfig,
 	CommentConfig,
@@ -84,8 +83,8 @@ export const siteConfig: SiteConfig = {
 
 			subtitle: [
 				"Red Team · Web Exploitation · Pentesting",
-    			"Writeups & Payloads",
-    			"Learning in public :v",
+				"Writeups & Payloads",
+				"Learning in public :v",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -170,7 +169,6 @@ export const navBarConfig: NavBarConfig = {
 					url: "archive/?category=Learning",
 					icon: "fa6-solid:book-open",
 				},
-				
 			],
 		},
 		{
@@ -190,10 +188,10 @@ export const navBarConfig: NavBarConfig = {
 					external: true,
 					icon: "fa6-brands:linkedin",
 				},
-			    {
-  					name: "Hackmd",
-  					icon: "fa6-solid:book",   // hoặc "tabler:book"
-  					url: "https://hackmd.io/@Trohan0x00",
+				{
+					name: "Hackmd",
+					icon: "fa6-solid:book", // hoặc "tabler:book"
+					url: "https://hackmd.io/@Trohan0x00",
 					external: true,
 				},
 				{
@@ -201,8 +199,7 @@ export const navBarConfig: NavBarConfig = {
 					icon: "fa6-brands:wix",
 					url: "https://trietnguyen1892.wixstudio.com/trohanblog",
 					external: true,
-			    },
-				
+				},
 			],
 		},
 	],
@@ -228,13 +225,11 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:linkedin",
 			url: "https://www.linkedin.com/in/trohan0x00/",
 		},
-		
 	],
 	// Umami analytics: remember to insert the Umami head tag in your layout
 	umami: {
-		enable: false, // 是否显示umami统计
-		shareId:
-			"6A338YgvrzbG13mX", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
+		enable: true, // 是否显示umami统计
+		shareId: "6A338YgvrzbG13mX", //填入共享URL最后面那一串  比如：https://eu.umami.is/api/share/2dKQ5T0WrUn6AYtr 你就填入2dKQ5T0WrUn6AYtr
 		region: "eu", //Umami有两个区域，按需选择即可  比如：https://eu.umami.is 你就填入eu
 	},
 };
